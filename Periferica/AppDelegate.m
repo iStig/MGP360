@@ -16,8 +16,17 @@
 @implementation AppDelegate
 
 
+void uncaughtExceptionHandler(NSException *exception) {
+  NSLog(@"CRASH: %@", exception);
+  NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
+  // Internal error reporting
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+  
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+  
     [self applyStyle];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     return YES;
@@ -47,10 +56,17 @@
 
 - (void)applyStyle{
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-    [[UINavigationBar appearance] setTitleTextAttributes: @{
-                                                            NSForegroundColorAttributeName : [UIColor whiteColor],
-                                                            NSFontAttributeName: [UIFont fontWithName:@"ProximaNovaSoft-Semibold" size:17.0f]
-    }];
+//    [[UINavigationBar appearance] setTitleTextAttributes: @{
+//                                                            NSForegroundColorAttributeName : [UIColor whiteColor],
+//                                                            NSFontAttributeName: [UIFont fontWithName:@"ProximaNovaSoft-Semibold" size:17.0f]
+//    }];
+  [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+  NSDictionary *attributes = @{
+                               NSUnderlineStyleAttributeName: @1,
+                               NSForegroundColorAttributeName : [UIColor whiteColor],
+                               NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Bold" size:17.0f]
+                               };
+  [[UINavigationBar appearance] setTitleTextAttributes:attributes];
 }
 
 @end
