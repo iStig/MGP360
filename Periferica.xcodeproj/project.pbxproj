@@ -13,6 +13,11 @@
 		0B1A71DF1AE949A800F8A029 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B1A71DE1AE949A800F8A029 /* ItemDetail.storyboard */; };
 		0B1A72031AE9575700F8A029 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1A72021AE9575700F8A029 /* DetailTableViewController.m */; };
 		0BDB3B831AEA7D8C00EF27E6 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDB3B821AEA7D8C00EF27E6 /* PlayerViewController.m */; };
+		625EF4981BE926F900DF9BB3 /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 625EF4971BE926F900DF9BB3 /* ProximaNovaCond-Regular.otf */; };
+		625EF49A1BE9270400DF9BB3 /* ProximaNovaCond-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 625EF4991BE9270400DF9BB3 /* ProximaNovaCond-Semibold.otf */; };
+		625EF49C1BE9282D00DF9BB3 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 625EF49B1BE9282D00DF9BB3 /* ProximaNova-Bold.otf */; };
+		625EF49F1BE9283600DF9BB3 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 625EF49D1BE9283600DF9BB3 /* ProximaNova-Regular.otf */; };
+		625EF4A01BE9283600DF9BB3 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 625EF49E1BE9283600DF9BB3 /* ProximaNova-Semibold.otf */; };
 		8B4FFA4A1AE934C100CDEB91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4FFA481AE934C000CDEB91 /* Main.storyboard */; };
 		8B4FFA4C1AE945A500CDEB91 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FFA4B1AE945A500CDEB91 /* MapKit.framework */; };
 		8B4FFA4F1AE9712600CDEB91 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4FFA4E1AE9712600CDEB91 /* Photo.m */; };
@@ -68,6 +73,11 @@
 		0BDB3B811AEA7D8C00EF27E6 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		0BDB3B821AEA7D8C00EF27E6 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		4CC7E62EBE635EAC27ABE898 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		625EF4971BE926F900DF9BB3 /* ProximaNovaCond-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-Regular.otf"; sourceTree = "<group>"; };
+		625EF4991BE9270400DF9BB3 /* ProximaNovaCond-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-Semibold.otf"; sourceTree = "<group>"; };
+		625EF49B1BE9282D00DF9BB3 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		625EF49D1BE9283600DF9BB3 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		625EF49E1BE9283600DF9BB3 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
 		8B4FFA491AE934C000CDEB91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B4FFA4B1AE945A500CDEB91 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8B4FFA4D1AE9712600CDEB91 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
@@ -160,6 +170,18 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		62A0BD3C1BE92621009F4E1B /* ProximaNova */ = {
+			isa = PBXGroup;
+			children = (
+				625EF49B1BE9282D00DF9BB3 /* ProximaNova-Bold.otf */,
+				625EF49D1BE9283600DF9BB3 /* ProximaNova-Regular.otf */,
+				625EF49E1BE9283600DF9BB3 /* ProximaNova-Semibold.otf */,
+				625EF4971BE926F900DF9BB3 /* ProximaNovaCond-Regular.otf */,
+				625EF4991BE9270400DF9BB3 /* ProximaNovaCond-Semibold.otf */,
+			);
+			path = ProximaNova;
+			sourceTree = "<group>";
+		};
 		8BA4CC971AE81BE900D87A65 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +244,7 @@
 		8BC6BEA51AE8109000187364 = {
 			isa = PBXGroup;
 			children = (
+				62A0BD3C1BE92621009F4E1B /* ProximaNova */,
 				8BC6BEB01AE8109000187364 /* Periferica */,
 				8BC6BECA1AE8109100187364 /* PerifericaTests */,
 				8BC6BEAF1AE8109000187364 /* Products */,
@@ -364,7 +387,7 @@
 		8BC6BEA61AE8109000187364 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = lateralview;
 				TargetAttributes = {
 					8BC6BEAD1AE8109000187364 = {
@@ -401,8 +424,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B4FFA4A1AE934C100CDEB91 /* Main.storyboard in Resources */,
+				625EF4981BE926F900DF9BB3 /* ProximaNovaCond-Regular.otf in Resources */,
+				625EF49F1BE9283600DF9BB3 /* ProximaNova-Regular.otf in Resources */,
+				625EF49A1BE9270400DF9BB3 /* ProximaNovaCond-Semibold.otf in Resources */,
 				8BC6BEC21AE8109100187364 /* LaunchScreen.xib in Resources */,
 				0B1A71DF1AE949A800F8A029 /* ItemDetail.storyboard in Resources */,
+				625EF49C1BE9282D00DF9BB3 /* ProximaNova-Bold.otf in Resources */,
+				625EF4A01BE9283600DF9BB3 /* ProximaNova-Semibold.otf in Resources */,
 				8BC6BEBF1AE8109100187364 /* Images.xcassets in Resources */,
 				0B1138821AEECCE000D6EEA1 /* loop_piso.mp4 in Resources */,
 			);
@@ -547,6 +575,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -562,7 +591,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -599,7 +628,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -618,8 +647,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Periferica/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.lateralview.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -636,8 +666,9 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Periferica/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.lateralview.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -656,6 +687,7 @@
 				);
 				INFOPLIST_FILE = PerifericaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lateralview.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Periferica.app/Periferica";
 			};
@@ -671,6 +703,7 @@
 				);
 				INFOPLIST_FILE = PerifericaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "lateralview.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Periferica.app/Periferica";
 			};

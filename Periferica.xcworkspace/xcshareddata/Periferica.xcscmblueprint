@@ -1,17 +1,15 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "524F581A2AF5BF2BB0AE1EC670CECFBC969277C7",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "f6636369-2469-4640-93f0-4a90a27045cf++2707",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
     "f6636369-2469-4640-93f0-4a90a27045cf++2707" : {
 
     }
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "524F581A2AF5BF2BB0AE1EC670CECFBC969277C7" : 0,
     "f6636369-2469-4640-93f0-4a90a27045cf++2707" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E4455EEA-DF62-482A-AEB4-34EFD30754E1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "524F581A2AF5BF2BB0AE1EC670CECFBC969277C7" : "MGP360\/",
     "f6636369-2469-4640-93f0-4a90a27045cf++2707" : "MGP360\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Periferica",
@@ -21,7 +19,7 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:cooliopas\/MGP360.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "524F581A2AF5BF2BB0AE1EC670CECFBC969277C7"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "f6636369-2469-4640-93f0-4a90a27045cf++2707"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/svn.mardelplata.gov.ar\/svn\/concursoAPPs",

@@ -306,7 +306,7 @@ static CGFloat kImageOriginHight = 280.f;
     
     if ([text isEqualToString:@""]) return 0.f;
     
-    UIFont *font = [UIFont fontWithName:@"ProximaNovaSoft-Regular" size:15.0f];
+    UIFont *font = [UIFont fontWithName:@"ProximaNova-Regular" size:15.0f];
     CGSize constraint = CGSizeMake(width , 20000.0f);
     CGSize title_size;
     float totalHeight;

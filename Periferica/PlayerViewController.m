@@ -170,8 +170,8 @@
     // set default FOV
     [pfView setFieldOfView:75.0f];
     // register the interface orientation with the PFView
-    [pfView setInterfaceOrientation:self.interfaceOrientation];
-    switch(self.interfaceOrientation)
+    [pfView setInterfaceOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
+    switch([[UIApplication sharedApplication] statusBarOrientation])
     {
         case UIDeviceOrientationPortrait:
         case UIDeviceOrientationPortraitUpsideDown:
