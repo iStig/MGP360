@@ -403,15 +403,15 @@
                                     <constraint firstAttribute="width" constant="180" id="axb-AO-9jW"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Coloca tu Smartphone dentro de tu Google Cardboard para iniciar la experiencia 360" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qO-WC-KsL">
-                                <rect key="frame" x="36" y="280" width="303" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coloca tu Smartphone dentro de tu Google Cardboard para iniciar la experiencia 360" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qO-WC-KsL">
+                                <rect key="frame" x="36" y="280" width="303" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5v-Yt-QtO">
-                                <rect key="frame" x="125" y="347" width="125" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5v-Yt-QtO">
+                                <rect key="frame" x="125" y="340" width="125" height="40"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -474,6 +474,6 @@
         <image name="play_icon" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nSq-H5-ucg"/>
+        <segue reference="9ex-Og-YEO"/>
     </inferredMetricsTieBreakers>
 </document>

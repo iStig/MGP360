@@ -48,7 +48,7 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];  
     self.items = [[NSMutableArray alloc] init];
     
-    //Set Map Coordinates to Mar Del Plata
+    //Set Map Coordinates to Mar Del Plata http://lvyou.baidu.com/madepulata/ditu/?from=zhixin
     CLLocationCoordinate2D mdqCoordinate;
     mdqCoordinate.latitude = -38.017427;
     mdqCoordinate.longitude = -57.548695;

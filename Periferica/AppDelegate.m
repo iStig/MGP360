@@ -63,13 +63,10 @@ void uncaughtExceptionHandler(NSException *exception) {
 
 - (void)logAllFonts {
   NSArray *familyNames = [UIFont familyNames];
-  for( NSString *familyName in familyNames )
-  {
+  for(NSString *familyName in familyNames) {
     printf( "Family: %s \n", [familyName UTF8String]);
-    
     NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
-    for( NSString *fontName in fontNames )
-    {
+    for(NSString *fontName in fontNames) {
       printf( "\tFont: %s \n", [fontName UTF8String] );
     }
   }
