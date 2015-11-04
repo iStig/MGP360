@@ -25,7 +25,7 @@ void uncaughtExceptionHandler(NSException *exception) {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
   NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-  [self logAllFonts];
+ // [self logAllFonts];
   [self applyStyle];
   [[AFNetworkReachabilityManager sharedManager] startMonitoring];
   return YES;

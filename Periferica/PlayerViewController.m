@@ -126,7 +126,7 @@
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     
     // ATTENTION! Only return orientation MASK values
     return UIInterfaceOrientationMaskLandscapeLeft;

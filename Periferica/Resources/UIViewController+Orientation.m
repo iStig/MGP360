@@ -27,7 +27,7 @@ static NSUInteger __orientation = UIInterfaceOrientationMaskAll;
     [self swizzled_viewWillDisappear:animated];
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return __orientation;
 }
