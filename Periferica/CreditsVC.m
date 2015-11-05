@@ -34,21 +34,37 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.navigationController.navigationBar setBackgroundImage:nil
-                                                  forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+  if ([segue.identifier isEqualToString:@"containerVideo"]){
+    self.videoPlayerVC = [segue destinationViewController];
+    self.videoPlayerVC.isCredits = YES;
+    Item *item = [[Item alloc] init];
+    item.url = @"http://s3.amazonaws.com/truantvr360/videos/videos/000/000/003/original/parque_san_martin_logo.mp4?1429299657";
+    item.isVideo = YES;
+    [self.videoPlayerVC setItem:item];
+  }
+  
+
+  /*
+    #warning  test url
     if ([segue.identifier isEqualToString:@"containerVideo"]){
         self.videoPlayerVC = [segue destinationViewController];
-        self.videoPlayerVC.isCredits = YES;
+        self.videoPlayerVC.isCredits = NO;
         Item *item = [[Item alloc] init];
-        item.url = @"http://s3.amazonaws.com/truantvr360/videos/videos/000/000/003/original/parque_san_martin_logo.mp4?1429299657";
+//        item.url = @"http://s3.amazonaws.com/truantvr360/videos/videos/000/000/003/original/parque_san_martin_logo.mp4?1429299657";
+//        item.url = @"rtmp://pili-live-rtmp.snailvr.com/snailvr-test/mytest1446515073";
+//      item.url = @"http://pili-live-hdl.snailvr.com/snailvr-test/mytest1446515073.flv";
+//      item.url = @"http://pili-live-hls.snailvr.com/snailvr-test/mytest1446515073.m3u8";
+      item.url = @"http://www.ossrs.net:8080/live/demo.1446704833022.1446704956484.1446705144107.m3u8";
         item.isVideo = YES;
         [self.videoPlayerVC setItem:item];
     }
-    
+   */
+  
 }
 
 #pragma mark - NavTransition

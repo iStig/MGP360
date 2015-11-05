@@ -48,7 +48,7 @@
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];  
     self.items = [[NSMutableArray alloc] init];
     
-    //Set Map Coordinates to Mar Del Plata http://lvyou.baidu.com/madepulata/ditu/?from=zhixin
+    //Set Map Coordinates to Mar Del Plata  http://lvyou.baidu.com/madepulata/ditu/?from=zhixin
     CLLocationCoordinate2D mdqCoordinate;
     mdqCoordinate.latitude = -38.017427;
     mdqCoordinate.longitude = -57.548695;
@@ -133,7 +133,7 @@
     NSString *videoListUrl = [NSString stringWithFormat:@"%@%@",BaseUrl,VideoListPath];
     
     [manager GET:videoListUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+//        NSLog(@"JSON: %@", responseObject);
         self.videoList = [[NSMutableArray alloc] init];
         id videos = [responseObject valueForKey:@"videos"];
         
@@ -165,7 +165,7 @@
     NSString *photoListUrl = [NSString stringWithFormat:@"%@%@",BaseUrl,PhotoListPath];
     
     [manager GET:photoListUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+//        NSLog(@"JSON: %@", responseObject);
         self.photoList = [[NSMutableArray alloc] init];
         id photos = [responseObject valueForKey:@"photo"];
         
@@ -223,6 +223,7 @@
     MyPin.image = [UIImage imageNamed:@"pin_icon"];
     MyPin.canShowCallout = YES;
     MyPin.calloutOffset = CGPointMake(0, 0);
+//    MyPin.animatesDrop = YES;
 
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     MyPin.rightCalloutAccessoryView = rightButton;
@@ -231,9 +232,11 @@
     if (Myannotation.item.isVideo){
         UIImageView *myCustomImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"video_icon_blue"]];
         MyPin.leftCalloutAccessoryView = myCustomImage;
+        MyPin.pinTintColor = [UIColor redColor];
     }else{
         UIImageView *myCustomImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"camera_icon_blue"]];
         MyPin.leftCalloutAccessoryView = myCustomImage;
+        MyPin.pinTintColor = [UIColor orangeColor];
     }
     
     return MyPin;

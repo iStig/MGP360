@@ -11,17 +11,6 @@
             <string>ProximaNova-Regular</string>
             <string>ProximaNova-Regular</string>
         </mutableArray>
-        <mutableArray key="ProximaNova-Semibold.otf">
-            <string>ProximaNova-Semibold</string>
-            <string>ProximaNova-Semibold</string>
-            <string>ProximaNova-Semibold</string>
-            <string>ProximaNova-Semibold</string>
-            <string>ProximaNova-Semibold</string>
-            <string>ProximaNova-Semibold</string>
-            <string>ProximaNova-Semibold</string>
-            <string>ProximaNova-Semibold</string>
-            <string>ProximaNova-Semibold</string>
-        </mutableArray>
     </customFonts>
     <scenes>
         <!--Navigation Controller-->
@@ -246,158 +235,23 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HvZ-Az-Ddo">
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HvZ-Az-Ddo">
                                 <rect key="frame" x="0.0" y="-64" width="320" height="568"/>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="82Q-Pb-142" kind="embed" identifier="containerVideo" id="WNU-RE-cjb"/>
+                                    <segue destination="82Q-Pb-142" kind="embed" identifier="containerVideo" id="kFj-uq-pBN"/>
                                 </connections>
                             </containerView>
-                            <view alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Tt-C1-2Sk">
-                                <rect key="frame" x="0.0" y="-64" width="320" height="568"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teveo360_logo" translatesAutoresizingMaskIntoConstraints="NO" id="iVs-S4-OKe" userLabel="Logo MeVeo360">
-                                <rect key="frame" x="30" y="174" width="50" height="50"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="2mQ-t4-6Xb"/>
-                                    <constraint firstAttribute="height" constant="50" id="biP-eI-AXx"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+54 (223) 154-395886" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pI0-Ge-uTM">
-                                <rect key="frame" x="88" y="174" width="109.5" height="11"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mdp@meveo360.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDK-tw-xqf">
-                                <rect key="frame" x="88" y="187" width="107" height="11"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="meveo360.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVs-ee-NlU">
-                                <rect key="frame" x="88" y="201" width="76.5" height="11"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lateralview_logo" translatesAutoresizingMaskIntoConstraints="NO" id="8yY-3R-ceR" userLabel="Logo LateralView">
-                                <rect key="frame" x="30" y="254" width="50" height="50"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="1gR-79-4u3"/>
-                                    <constraint firstAttribute="width" constant="50" id="IV6-Sb-Tvr"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello@lateralview.co" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuL-1X-Yx5">
-                                <rect key="frame" x="88" y="254" width="100" height="11"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@LateralView" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fL-Ij-aOS">
-                                <rect key="frame" x="88" y="267" width="66.5" height="11"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lateralview.co" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oP8-HB-rfG">
-                                <rect key="frame" x="88" y="281" width="67.5" height="11"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mas_fotografia_icon" translatesAutoresizingMaskIntoConstraints="NO" id="qAw-cn-2ii" userLabel="Logo Photos">
-                                <rect key="frame" x="30" y="334" width="50" height="50"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="a4g-8J-0zw"/>
-                                    <constraint firstAttribute="width" constant="50" id="afu-wj-yup"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+54 (223) 154-395886" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igg-bS-jFr">
-                                <rect key="frame" x="88" y="334" width="109.5" height="11"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="franciscomasfotografias@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTC-ff-qBn">
-                                <rect key="frame" x="88" y="347" width="177" height="11"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="franciscomas.com.ar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRc-T8-bKj">
-                                <rect key="frame" x="88" y="361" width="101" height="11"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="11"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hXI-Qt-neH" firstAttribute="top" secondItem="8Tt-C1-2Sk" secondAttribute="bottom" id="0gk-1U-FBR"/>
-                            <constraint firstItem="hXI-Qt-neH" firstAttribute="top" secondItem="qAw-cn-2ii" secondAttribute="bottom" constant="120" id="17J-gZ-sQL"/>
-                            <constraint firstItem="8fL-Ij-aOS" firstAttribute="top" secondItem="IuL-1X-Yx5" secondAttribute="bottom" constant="2" id="1Oe-KE-gsD"/>
                             <constraint firstItem="HvZ-Az-Ddo" firstAttribute="leading" secondItem="5wQ-95-gvC" secondAttribute="leading" id="37Y-Is-46Z"/>
-                            <constraint firstItem="IuL-1X-Yx5" firstAttribute="leading" secondItem="8yY-3R-ceR" secondAttribute="trailing" constant="8" id="5Ui-et-lIY"/>
-                            <constraint firstItem="iVs-S4-OKe" firstAttribute="centerX" secondItem="8yY-3R-ceR" secondAttribute="centerX" id="7M6-OM-xzi"/>
-                            <constraint firstItem="HvZ-Az-Ddo" firstAttribute="centerX" secondItem="8Tt-C1-2Sk" secondAttribute="centerX" id="83F-Ga-IPO"/>
-                            <constraint firstItem="qAw-cn-2ii" firstAttribute="leading" secondItem="5wQ-95-gvC" secondAttribute="leadingMargin" constant="20" id="8Tb-dw-C5V"/>
-                            <constraint firstItem="qAw-cn-2ii" firstAttribute="top" secondItem="igg-bS-jFr" secondAttribute="top" id="9lO-bq-D9d"/>
-                            <constraint firstItem="8Tt-C1-2Sk" firstAttribute="top" secondItem="Gfb-wO-Tyo" secondAttribute="bottom" id="A5E-Gi-4vF"/>
-                            <constraint firstItem="fVs-ee-NlU" firstAttribute="top" secondItem="EDK-tw-xqf" secondAttribute="bottom" constant="3" id="AIi-Hm-nr5"/>
-                            <constraint firstAttribute="trailing" secondItem="8Tt-C1-2Sk" secondAttribute="trailing" id="Axh-8W-Ghb"/>
-                            <constraint firstItem="IuL-1X-Yx5" firstAttribute="leading" secondItem="8fL-Ij-aOS" secondAttribute="leading" id="HCJ-iv-dIu"/>
-                            <constraint firstItem="oP8-HB-rfG" firstAttribute="top" secondItem="8fL-Ij-aOS" secondAttribute="bottom" constant="3" id="Jd6-id-xzz"/>
-                            <constraint firstItem="pI0-Ge-uTM" firstAttribute="leading" secondItem="EDK-tw-xqf" secondAttribute="leading" id="KHJ-3M-IBQ"/>
-                            <constraint firstItem="qAw-cn-2ii" firstAttribute="leading" secondItem="5wQ-95-gvC" secondAttribute="leading" constant="30" id="LEo-gY-Y1P"/>
-                            <constraint firstItem="igg-bS-jFr" firstAttribute="leading" secondItem="qAw-cn-2ii" secondAttribute="trailing" constant="8" id="Ngy-9w-arX"/>
-                            <constraint firstItem="hTC-ff-qBn" firstAttribute="top" secondItem="igg-bS-jFr" secondAttribute="bottom" constant="2" id="Pfd-IC-gwr"/>
-                            <constraint firstItem="HvZ-Az-Ddo" firstAttribute="width" secondItem="8Tt-C1-2Sk" secondAttribute="width" id="QJv-b4-SvX"/>
-                            <constraint firstItem="8yY-3R-ceR" firstAttribute="top" secondItem="iVs-S4-OKe" secondAttribute="bottom" constant="30" id="QP9-5P-3ZF"/>
-                            <constraint firstItem="oP8-HB-rfG" firstAttribute="leading" secondItem="8fL-Ij-aOS" secondAttribute="leading" id="RWv-Ys-Yem"/>
-                            <constraint firstItem="fVs-ee-NlU" firstAttribute="leading" secondItem="EDK-tw-xqf" secondAttribute="leading" id="S7b-1E-42A"/>
-                            <constraint firstItem="qAw-cn-2ii" firstAttribute="centerX" secondItem="8yY-3R-ceR" secondAttribute="centerX" id="TVQ-QH-kPk"/>
-                            <constraint firstItem="HvZ-Az-Ddo" firstAttribute="height" secondItem="8Tt-C1-2Sk" secondAttribute="height" id="XHv-sg-x56"/>
                             <constraint firstItem="HvZ-Az-Ddo" firstAttribute="top" secondItem="Gfb-wO-Tyo" secondAttribute="bottom" constant="-64" id="XT2-B5-ZXx"/>
-                            <constraint firstItem="qAw-cn-2ii" firstAttribute="top" secondItem="8yY-3R-ceR" secondAttribute="bottom" constant="30" id="ZN1-bd-EIn"/>
                             <constraint firstAttribute="trailing" secondItem="HvZ-Az-Ddo" secondAttribute="trailing" id="a66-JB-gWR"/>
-                            <constraint firstItem="IuL-1X-Yx5" firstAttribute="top" secondItem="HvZ-Az-Ddo" secondAttribute="bottom" id="etl-jC-xZH"/>
-                            <constraint firstItem="EDK-tw-xqf" firstAttribute="top" secondItem="pI0-Ge-uTM" secondAttribute="bottom" constant="2" id="gbS-sG-GCn"/>
-                            <constraint firstItem="8yY-3R-ceR" firstAttribute="top" secondItem="IuL-1X-Yx5" secondAttribute="top" id="iNb-JK-uXV"/>
-                            <constraint firstItem="HvZ-Az-Ddo" firstAttribute="centerY" secondItem="8Tt-C1-2Sk" secondAttribute="centerY" id="kbc-5F-ZMc"/>
-                            <constraint firstItem="pI0-Ge-uTM" firstAttribute="leading" secondItem="iVs-S4-OKe" secondAttribute="trailing" constant="8" id="pFm-n1-gpb"/>
                             <constraint firstItem="hXI-Qt-neH" firstAttribute="top" secondItem="HvZ-Az-Ddo" secondAttribute="bottom" id="pfO-GE-R2i"/>
-                            <constraint firstItem="igg-bS-jFr" firstAttribute="leading" secondItem="hTC-ff-qBn" secondAttribute="leading" id="s0m-U0-QXb"/>
-                            <constraint firstItem="8Tt-C1-2Sk" firstAttribute="leading" secondItem="5wQ-95-gvC" secondAttribute="leading" id="tPS-j0-ONE"/>
-                            <constraint firstItem="nRc-T8-bKj" firstAttribute="top" secondItem="hTC-ff-qBn" secondAttribute="bottom" constant="3" id="xGh-mg-rbb"/>
-                            <constraint firstItem="iVs-S4-OKe" firstAttribute="top" secondItem="pI0-Ge-uTM" secondAttribute="top" id="yBa-2y-6su"/>
-                            <constraint firstItem="nRc-T8-bKj" firstAttribute="leading" secondItem="hTC-ff-qBn" secondAttribute="leading" id="ywX-R0-LOc"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="A5E-Gi-4vF"/>
-                                <exclude reference="Axh-8W-Ghb"/>
-                                <exclude reference="tPS-j0-ONE"/>
-                                <exclude reference="etl-jC-xZH"/>
-                                <exclude reference="8Tb-dw-C5V"/>
-                                <exclude reference="0gk-1U-FBR"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="o3j-bD-Jbo">
                         <nil key="title"/>
@@ -465,11 +319,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lateralview_logo" width="37" height="37"/>
         <image name="logo_creditos" width="152" height="15"/>
         <image name="logo_gray" width="126" height="125"/>
-        <image name="mas_fotografia_icon" width="37" height="37"/>
-        <image name="teveo360_logo" width="37" height="37"/>
         <image name="video_icon" width="26" height="18"/>
     </resources>
 </document>

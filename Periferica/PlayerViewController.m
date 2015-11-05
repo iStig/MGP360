@@ -459,6 +459,7 @@
 
 - (IBAction) sliderChanged:(id) sender
 {
+  
 }
 
 - (IBAction) sliderUp:(id) sender
