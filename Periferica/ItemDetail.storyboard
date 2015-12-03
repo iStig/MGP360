@@ -185,7 +185,7 @@
                             <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l86-b8-WKg">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv1-Bz-eT9">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv1-Bz-eT9" userLabel="Stop Button">
                                         <rect key="frame" x="86" y="5" width="50" height="40"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -193,7 +193,7 @@
                                             <constraint firstAttribute="width" constant="50" id="VX5-JY-hUd"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="parar">
+                                        <state key="normal" title="Stop">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -216,7 +216,7 @@
                                             <action selector="sliderUp:" destination="Keh-Cy-i7L" eventType="touchUpInside" id="oTL-tR-vaK"/>
                                         </connections>
                                     </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giu-z8-Y7p">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giu-z8-Y7p" userLabel="Play Button">
                                         <rect key="frame" x="0.0" y="5" width="80" height="40"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -224,7 +224,7 @@
                                             <constraint firstAttribute="width" constant="80" id="2Fz-r7-2Pb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="reproducir">
+                                        <state key="normal" title="Play">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -237,34 +237,7 @@
                                             <action selector="playButton:" destination="Keh-Cy-i7L" eventType="touchUpInside" id="zuk-Vp-dSU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLi-MI-P57">
-                                        <rect key="frame" x="282" y="5" width="85" height="40"/>
-                                        <animations/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="65" id="gkg-Ig-7ER"/>
-                                            <constraint firstAttribute="width" constant="85" id="ujv-xI-nim"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="movimiento">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="gkg-Ig-7ER"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <action selector="hiliteButton:" destination="Keh-Cy-i7L" eventType="touchDown" id="Voy-lh-sBw"/>
-                                            <action selector="normalButton:" destination="Keh-Cy-i7L" eventType="touchUpOutside" id="MsY-Hn-I9U"/>
-                                            <action selector="toggleNavigation:" destination="Keh-Cy-i7L" eventType="touchUpInside" id="O7I-60-VWb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX3-Y6-QiM" userLabel="photos close">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cX3-Y6-QiM" userLabel="Photos Close Button">
                                         <rect key="frame" x="0.0" y="5" width="80" height="40"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -272,7 +245,7 @@
                                             <constraint firstAttribute="width" constant="80" id="D2K-JI-CrL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="cerrar">
+                                        <state key="normal" title="Plose">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -286,6 +259,27 @@
                                             <action selector="stopButton:" destination="Keh-Cy-i7L" eventType="touchUpInside" id="aAK-qf-SY0"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLi-MI-P57">
+                                        <rect key="frame" x="282" y="5" width="85" height="40"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="ujv-xI-nim"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Motion">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="hiliteButton:" destination="Keh-Cy-i7L" eventType="touchDown" id="Voy-lh-sBw"/>
+                                            <action selector="normalButton:" destination="Keh-Cy-i7L" eventType="touchUpOutside" id="MsY-Hn-I9U"/>
+                                            <action selector="toggleNavigation:" destination="Keh-Cy-i7L" eventType="touchUpInside" id="O7I-60-VWb"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSz-bR-Ngn">
                                         <rect key="frame" x="144" y="5" width="48" height="40"/>
                                         <animations/>
@@ -294,7 +288,7 @@
                                             <constraint firstAttribute="width" constant="48" id="e92-ZU-wgb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="cerrar">
+                                        <state key="normal" title="Vlose">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -317,7 +311,6 @@
                                     <constraint firstItem="cX3-Y6-QiM" firstAttribute="leading" secondItem="l86-b8-WKg" secondAttribute="leading" id="8gU-D4-GKd"/>
                                     <constraint firstAttribute="bottom" secondItem="QSz-bR-Ngn" secondAttribute="bottom" constant="5" id="Bt5-Zi-vQX"/>
                                     <constraint firstItem="dLi-MI-P57" firstAttribute="top" secondItem="l86-b8-WKg" secondAttribute="top" constant="5" id="C28-T0-y5O"/>
-                                    <constraint firstItem="dLi-MI-P57" firstAttribute="leading" secondItem="qLj-Mk-86E" secondAttribute="trailing" constant="8" id="JTg-eT-Isq"/>
                                     <constraint firstAttribute="bottom" secondItem="qLj-Mk-86E" secondAttribute="bottom" constant="12" id="R2q-q3-54Z"/>
                                     <constraint firstAttribute="trailing" secondItem="dLi-MI-P57" secondAttribute="trailing" constant="8" id="S0n-f5-2kc"/>
                                     <constraint firstItem="QSz-bR-Ngn" firstAttribute="top" secondItem="l86-b8-WKg" secondAttribute="top" constant="5" id="VKa-Mz-CkL"/>
@@ -334,11 +327,6 @@
                                     <constraint firstItem="qLj-Mk-86E" firstAttribute="top" secondItem="l86-b8-WKg" secondAttribute="top" constant="8" id="wSg-tI-els"/>
                                     <constraint firstAttribute="bottom" secondItem="dLi-MI-P57" secondAttribute="bottom" constant="5" id="yX6-JW-1cZ"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="JTg-eT-Isq"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="9i2-X5-tV4">
                                 <rect key="frame" x="178" y="324" width="20" height="20"/>
@@ -355,22 +343,13 @@
                             <constraint firstAttribute="trailing" secondItem="l86-b8-WKg" secondAttribute="trailing" id="2By-9f-hu2"/>
                             <constraint firstAttribute="centerX" secondItem="9i2-X5-tV4" secondAttribute="centerX" id="Cwl-Ck-whe"/>
                             <constraint firstAttribute="centerY" secondItem="9i2-X5-tV4" secondAttribute="centerY" id="exG-uQ-Dfz"/>
-                            <constraint firstItem="l86-b8-WKg" firstAttribute="top" secondItem="9i2-X5-tV4" secondAttribute="bottom" constant="8" id="gV5-ai-glc"/>
                             <constraint firstItem="UTA-v7-YzQ" firstAttribute="top" secondItem="l86-b8-WKg" secondAttribute="bottom" id="hQv-UN-gpG"/>
-                            <constraint firstItem="9i2-X5-tV4" firstAttribute="leading" secondItem="4vt-Tr-3g2" secondAttribute="leadingMargin" id="ohU-2W-PbG"/>
                             <constraint firstItem="l86-b8-WKg" firstAttribute="leading" secondItem="4vt-Tr-3g2" secondAttribute="leading" id="z2H-Ma-cIb"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ohU-2W-PbG"/>
-                                <exclude reference="gV5-ai-glc"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="motionButton" destination="dLi-MI-P57" id="HbL-eJ-b2B"/>
-                        <outlet property="navbutton" destination="dLi-MI-P57" id="KhA-Lo-3xi"/>
                         <outlet property="photosCloseButton" destination="cX3-Y6-QiM" id="zcI-er-SYF"/>
                         <outlet property="playbutton" destination="giu-z8-Y7p" id="LcY-JS-h7P"/>
                         <outlet property="seekindicator" destination="9i2-X5-tV4" id="WYr-tf-5hw"/>

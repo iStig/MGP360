@@ -21,8 +21,6 @@
     
     IBOutlet UIButton *playbutton;
     IBOutlet UIButton *stopbutton;
-    IBOutlet UIButton *navbutton;
-    IBOutlet UIButton *viewbutton;
     IBOutlet UISlider *slider;
     IBOutlet UIButton *videoCloseButton;
     IBOutlet UIButton *photosCloseButton;
@@ -31,9 +29,7 @@
     IBOutlet UIActivityIndicatorView *seekindicator;
     
     NSTimer *bufferTimer;
-    BOOL shouldPLay;
-    
-    UIImage *pauseImage;
+
 }
 
 - (void) onStatusMessage : (PFAsset *) asset message:(enum PFASSETMESSAGE) m;
@@ -62,22 +58,18 @@
                                                    target: self
                                                  selector:@selector(onPlaybackTime:)
                                                  userInfo: nil repeats:YES];
-    
-    bufferTimer = [NSTimer scheduledTimerWithTimeInterval: 0.1
-                                                   target: self
-                                                 selector:@selector(bufferVideo)
-                                                 userInfo: nil repeats:YES];
-    
+  
+  
+  
     seekindicator.hidden = TRUE;
     
     currentmode = PF_NAVIGATION_MOTION;
     currentview = 0;
-    [self normalButton:viewbutton];
-    [self normalButton:navbutton];
+
+    [self normalButton:motionButton];
     [self normalButton:playbutton];
     [self normalButton:stopbutton];
-    
-    pauseImage = [UIImage imageNamed:@"pausescreen.png"];
+  
     
     if (!self.isCredits) {
         NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationLandscapeLeft];
@@ -94,11 +86,11 @@
         videoCloseButton.hidden = TRUE;
         photosCloseButton.hidden = FALSE;
     }else{
+      if (!self.isPortrait) {
         videoCloseButton.hidden = FALSE;
         photosCloseButton.hidden = TRUE;
+      }
     }
-    
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -114,9 +106,9 @@
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [bufferTimer invalidate];
+
     [slidertimer invalidate];
-    bufferTimer = nil;
+
     slidertimer = nil;
     [self stop];
 }
@@ -132,14 +124,7 @@
     return UIInterfaceOrientationMaskLandscapeLeft;
 }
 
--(void)bufferVideo {
-    if ([pfAsset getStatus] == PF_ASSET_DOWNLOADING && [pfAsset getDownloadProgress] >= 0.05f)
-    {
-        shouldPLay = YES;
-    }else{
-        shouldPLay = NO;
-    }
-}
+
 
 -(void)onPlaybackTime:(NSTimer *)timer
 {
@@ -150,16 +135,13 @@
         
     if (!touchslider && [pfAsset getStatus] != PF_ASSET_SEEKING)
     {
+      if (!self.isPortrait) {
         CMTime t = [pfAsset getPlaybackTime];
-        
         slider.value = CMTimeGetSeconds(t);
+      }
     }
 }
 
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-//{
-//    return (interfaceOrientation == UIInterfaceOrientationLandscapeRight) || (interfaceOrientation == UIInterfaceOrientationLandscapeLeft);
-//}
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     [self resetViewParameters];
@@ -167,7 +149,7 @@
 
 - (void) resetViewParameters
 {
-    // set default FOV
+    // set default FOV(Field Of View)视场角定义:是指镜头能拍摄到的最大视场范围。
     [pfView setFieldOfView:75.0f];
     // register the interface orientation with the PFView
     [pfView setInterfaceOrientation:[[UIApplication sharedApplication] statusBarOrientation]];
@@ -183,41 +165,41 @@
     }
 }
 
-- (void) createHotspots // BORRAR!
-{
-    // create some sample hotspots on the view and register a callback
-    
-    id<PFHotspot> hp1 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
-    id<PFHotspot> hp2 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
-    id<PFHotspot> hp3 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
-    id<PFHotspot> hp4 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
-    id<PFHotspot> hp5 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
-    id<PFHotspot> hp6 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
-    
-    [hp1 setCoordinates:0 andX:0 andZ:0];
-    [hp2 setCoordinates:40 andX:5 andZ:0];
-    [hp3 setCoordinates:80 andX:1 andZ:0];
-    [hp4 setCoordinates:120 andX:-5 andZ:0];
-    [hp5 setCoordinates:160 andX:-10 andZ:0];
-    [hp6 setCoordinates:220 andX:0 andZ:0];
-    
-    [hp3 setSize:2];
-    [hp3 setAlpha:0.5f];
-    
-    [hp1 setTag:1];
-    [hp2 setTag:2];
-    [hp3 setTag:3];
-    [hp4 setTag:4];
-    [hp5 setTag:5];
-    [hp6 setTag:6];
-    
-    [hp1 addTarget:self action:@selector(onHotspot:)];
-    [hp2 addTarget:self action:@selector(onHotspot:)];
-    [hp3 addTarget:self action:@selector(onHotspot:)];
-    [hp4 addTarget:self action:@selector(onHotspot:)];
-    [hp5 addTarget:self action:@selector(onHotspot:)];
-    [hp6 addTarget:self action:@selector(onHotspot:)];
-}
+//- (void) createHotspots // BORRAR!
+//{
+//    // create some sample hotspots on the view and register a callback
+//    
+//    id<PFHotspot> hp1 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
+//    id<PFHotspot> hp2 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
+//    id<PFHotspot> hp3 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
+//    id<PFHotspot> hp4 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
+//    id<PFHotspot> hp5 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
+//    id<PFHotspot> hp6 = [pfView createHotspot:[UIImage imageNamed:@"hotspot.png"]];
+//    
+//    [hp1 setCoordinates:0 andX:0 andZ:0];
+//    [hp2 setCoordinates:40 andX:5 andZ:0];
+//    [hp3 setCoordinates:80 andX:1 andZ:0];
+//    [hp4 setCoordinates:120 andX:-5 andZ:0];
+//    [hp5 setCoordinates:160 andX:-10 andZ:0];
+//    [hp6 setCoordinates:220 andX:0 andZ:0];
+//    
+//    [hp3 setSize:2];
+//    [hp3 setAlpha:0.5f];
+//    
+//    [hp1 setTag:1];
+//    [hp2 setTag:2];
+//    [hp3 setTag:3];
+//    [hp4 setTag:4];
+//    [hp5 setTag:5];
+//    [hp6 setTag:6];
+//    
+//    [hp1 addTarget:self action:@selector(onHotspot:)];
+//    [hp2 addTarget:self action:@selector(onHotspot:)];
+//    [hp3 addTarget:self action:@selector(onHotspot:)];
+//    [hp4 addTarget:self action:@selector(onHotspot:)];
+//    [hp5 addTarget:self action:@selector(onHotspot:)];
+//    [hp6 addTarget:self action:@selector(onHotspot:)];
+//}
 
 - (void) onHotspot:(id<PFHotspot>) hotspot
 {
@@ -246,9 +228,9 @@
     [self.view sendSubviewToBack:pfView];
     
     if (_cardboard)
-        [pfView setViewMode:3 andAspect:16.0/9.0];
+        [pfView setViewMode:3 andAspect:16.0/9.0];//side-by-side VR 屏幕比例16:9
     else
-        [pfView setViewMode:0 andAspect:16.0/9.0];
+        [pfView setViewMode:0 andAspect:16.0/9.0];//3D 屏幕比例16:9
     
     // Set some parameters
     [self resetViewParameters];
@@ -293,8 +275,11 @@
     pfAsset  = nil;
 }
 
+
+
 - (void) onPlayerTime:(id<PFAsset>)asset hasTime:(CMTime)time
 {
+  NSLog(@"%@",asset);
 }
 
 - (void) onStatusMessage : (id<PFAsset>) asset message:(enum PFASSETMESSAGE) m
@@ -310,12 +295,12 @@
             CMTime t = [asset getDuration];
             slider.maximumValue = CMTimeGetSeconds(t);
             slider.minimumValue = 0.0;
-            [playbutton setTitle:@"pausar" forState:UIControlStateNormal];
+            [playbutton setTitle:@"Play" forState:UIControlStateNormal];
             slider.enabled = true;
             break;
         case PF_ASSET_PAUSED:
             NSLog(@"Paused");
-            [playbutton setTitle:@"reproducir" forState:UIControlStateNormal];
+            [playbutton setTitle:@"Pause" forState:UIControlStateNormal];
             break;
         case PF_ASSET_COMPLETE:
             NSLog(@"Complete");
@@ -342,8 +327,10 @@
     [self deleteAsset];
     [self deleteView];
     
-    [playbutton setTitle:@"reproducir" forState:UIControlStateNormal];
+    [playbutton setTitle:@"Pause" forState:UIControlStateNormal];
 }
+
+
 
 - (IBAction) stopButton:(id) sender
 {
@@ -362,7 +349,6 @@
     if (pfAsset != nil)
     {
         [pfAsset pause];
-//        [pfView injectImage:pauseImage];
         return;
     }
     
@@ -370,7 +356,7 @@
     [self createView];
     
     // create some hotspots
-    [self createHotspots];
+//     [self createHotspots];
 
     
     // create a Panframe asset
@@ -412,57 +398,52 @@
         if (currentmode == PF_NAVIGATION_MOTION)
         {
             currentmode = PF_NAVIGATION_TOUCH;
-            [navbutton setTitle:@"táctil" forState:UIControlStateNormal];
+            [motionButton setTitle:@"Touch" forState:UIControlStateNormal];
         }
         else
         {
             currentmode = PF_NAVIGATION_MOTION;
-            [navbutton setTitle:@"movimiento" forState:UIControlStateNormal];
+            [motionButton setTitle:@"Motion" forState:UIControlStateNormal];
         }
         [pfView setNavigationMode:currentmode];
     }
     
-    [self normalButton:navbutton];
+    [self normalButton:motionButton];
 }
 
-- (IBAction) toggleView:(id) sender
-{
-    if (pfView != nil)
-    {
-        if (currentview == 0)
-        {
-            currentview = 1;
-            [viewbutton setTitle:@"flat" forState:UIControlStateNormal];
-        }
-        else
-        {
-            currentview = 0;
-            [viewbutton setTitle:@"sphere" forState:UIControlStateNormal];
-        }
-        [pfView setViewMode:currentview andAspect:2.0/1.0];
-    }
-    
-    [self normalButton:viewbutton];
-}
 
-- (IBAction) hiliteButton:(id) sender
+
+- (IBAction) hiliteButton:(id) sender//深蓝色
 {
     UIButton *b = (UIButton *) sender;
     b.backgroundColor = [UIColor colorWithRed:53.0/255.0 green:72.0/255.0 blue:160.0/255.0 alpha:1.0];
 }
 
-- (IBAction) normalButton:(id) sender
+- (IBAction) normalButton:(id) sender//灰色
 {
     UIButton *b = (UIButton *) sender;
     b.backgroundColor = [UIColor colorWithRed:127.0/255.0 green:127.0/255.0 blue:127.0/255.0 alpha:1.0];
 }
 
-- (IBAction) sliderChanged:(id) sender
+- (IBAction) close {
+  [self stop];
+  if (_cardboard){
+    _cardboardVC.cameFromPlayer = YES;
+  }
+  //Set Portrait
+  NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
+  [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
+  [self setOrientation:UIInterfaceOrientationMaskPortrait];
+  [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+- (IBAction)sliderChanged:(id) sender
 {
   
 }
 
-- (IBAction) sliderUp:(id) sender
+- (IBAction)sliderUp:(id) sender
 {
     if (pfAsset != nil)
         [pfAsset setTimeRange:CMTimeMakeWithSeconds(slider.value, 1000) duration:kCMTimePositiveInfinity onKeyFrame:NO];
@@ -474,16 +455,5 @@
     touchslider = true;
 }
 
-- (IBAction) close {
-    [self stop];
-    if (_cardboard){
-        _cardboardVC.cameFromPlayer = YES;
-    }
-    //Set Portrait
-    NSNumber *value = [NSNumber numberWithInt:UIInterfaceOrientationPortrait];
-    [[UIDevice currentDevice] setValue:value forKey:@"orientation"];
-    [self setOrientation:UIInterfaceOrientationMaskPortrait];
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 @end

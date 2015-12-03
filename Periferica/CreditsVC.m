@@ -41,13 +41,16 @@
 {
   if ([segue.identifier isEqualToString:@"containerVideo"]){
     self.videoPlayerVC = [segue destinationViewController];
-    self.videoPlayerVC.isCredits = YES;
+    self.videoPlayerVC.isCredits = NO;
+    self.videoPlayerVC.isPortrait = YES;
     Item *item = [[Item alloc] init];
-    item.url = @"http://s3.amazonaws.com/truantvr360/videos/videos/000/000/003/original/parque_san_martin_logo.mp4?1429299657";
+    
+    if (!self.videoPlayerVC.isCredits) {//如果不用本地文件 就去用HLS直播流视频
+        item.url = @"http://s3.amazonaws.com/truantvr360/videos/videos/000/000/003/original/parque_san_martin_logo.mp4?1429299657";
+    }
     item.isVideo = YES;
     [self.videoPlayerVC setItem:item];
   }
-  
 
   /*
     #warning  test url

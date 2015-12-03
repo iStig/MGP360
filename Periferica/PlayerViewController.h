@@ -15,7 +15,8 @@
 
 @property (strong, nonatomic) Item *item;
 @property BOOL cardboard;
-@property BOOL isCredits;
+@property BOOL isCredits;//演示本地文件和app基础信息
+@property BOOL isPortrait;//竖屏
 @property (assign, nonatomic) CardboardScreenVC *cardboardVC;
 
 @end
